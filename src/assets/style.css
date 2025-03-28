@@ -1,0 +1,148 @@
+/* public/style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  nav {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 10px;
+    font-size: 18px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  ul li {
+    background: white;
+    margin: 10px auto;
+    padding: 15px;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* CSS cho Top Players */
+/* Căn giữa toàn bộ nội dung */
+.players-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Căn giữa theo chiều ngang */
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;  /* Đảm bảo nội dung căn giữa trang */
+}
+
+/* Căn chỉnh player card */
+.player {
+  background: white;
+  display: flex;
+  align-items: center; /* Căn giữa ảnh và nội dung */
+  gap: 15px; /* Khoảng cách giữa ảnh và nội dung */
+  text-align: center;
+  width: 50%;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
+
+/* Ảnh của cầu thủ */
+.player img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Nội dung cầu thủ */
+.player-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tiêu đề */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* Hiệu ứng gradient động */
+body {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/* Tạo hiệu ứng chuyển động */
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+/* Tạo overlay mờ giúp dễ đọc nội dung */
+.players-container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Hiệu ứng kính mờ */
+}
+
+/* Cập nhật phần card của từng cầu thủ */
+.player {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng hover */
+.player:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}

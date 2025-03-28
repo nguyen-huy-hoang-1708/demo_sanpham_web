@@ -1,5 +1,5 @@
 module.exports = {
   presets: [
-    '@vue/cli-plugin-babel/preset'
+    '@vue/cli-plugin-babel/preset' // Đảm bảo preset Vue được sử dụng
   ]
-}
+};
